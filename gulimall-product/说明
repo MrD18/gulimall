@@ -1,0 +1,35 @@
+1.整合MyBatis-Plus
+   1) 导入依赖
+    <dependency>
+               <groupId>com.baomidou</groupId>
+               <artifactId>mybatis-plus-boot-starter</artifactId>
+               <version>3.2.0</version>
+    </dependency>
+   2) 配置:
+        1. 配置数据源
+             1),导入数据库的驱动-- 都要用直接放到common
+             2), 在application.yml 配置数据源相关信息
+        2. 配置MyBatis-Plus
+              1),使用@MapperScan
+              2),告诉映射文件位置,也就是在 application.yml 文件中配置
+     -----------------------------------------------------------
+              mybatis-plus:
+                mapper-locations: classpath*:/mapper/**/*.xml
+                global-config:
+                  db-config:
+                    id-type: auto    # 主键生成规则,自增主键
+     ------------------------------------------------------------
+2. 使用的是renren-generator 项目将生成
+        -main
+           --java
+             ---com.yss.gulimall.product
+               ---- controller
+                    dao
+                    entity
+                    service
+           --resources
+              ---mapper
+                ----product.***.xml  各种xml文件
+              ---src
+                ----views.modules.product.***vue   各种vue文件
+        -sql  各种sql文件

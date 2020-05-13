@@ -1,0 +1,10 @@
+1.整体架构
+    common 公共服务  -- 各种公用的依赖(插件,数据源)
+                   -- 公用工具类
+                   -- 公用异常
+    coupon member order  product  ware
+    renren-fast 开源的后台服务
+    renren-generator 自动生成sql curd基本代码
+ 2. renren-fast  -- 配置文件的更改 application.yml 数据库的连接
+    renren-generator -- application.yml 数据源的更改
+                     -- generator.properties  配置信息
